@@ -106,12 +106,12 @@
       <div class="section-5-header" style="font-weight: 600; font-size: 20px;">
         Where you'll sleep
       </div>
-      <div class="slider-container">
+      <!-- <div class="slider-container">
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
-      </div>
+      </div> -->
     </div>
     <hr>
   </div>
@@ -125,10 +125,19 @@
       </div>
     </div>
 
-    <div>
-      <button>Check <br> availability</button>
+    <div id="imageContainer">
+      <img id="scaryImage" src="host.jpg" alt="Jump Scare" />
     </div>
+
+    <div>
+      <button id="jumpScareButton">Check <br> availability</button>
+    </div>
+
+    <audio id="jumpScareSound">
+      <source src="Jump-Scare.m4a" type="audio/mpeg">
+    </audio>
   </div>
+
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>

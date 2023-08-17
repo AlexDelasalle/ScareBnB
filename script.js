@@ -19,3 +19,23 @@ container.addEventListener('scroll', () => {
     }
   });
 });
+
+//Jump Scare Function
+const jumpScareButton = document.getElementById('jumpScareButton');
+const imageContainer = document.getElementById('imageContainer');
+const jumpScareSound = document.getElementById('jumpScareSound');
+
+jumpScareButton.addEventListener('click', () => {
+  // Play the jump scare sound
+  jumpScareSound.play();
+
+  // Show the scary image
+  imageContainer.classList.add('show');
+
+  // Hide the scary image and pause the sound after a brief moment
+  setTimeout(() => {
+    imageContainer.classList.remove('show');
+    jumpScareSound.pause();
+    jumpScareSound.currentTime = 0; // Reset audio to the beginning
+  }, 3000); // Adjust this value as needed for the duration of the effect
+});
