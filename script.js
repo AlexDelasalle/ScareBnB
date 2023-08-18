@@ -39,3 +39,20 @@ jumpScareButton.addEventListener('click', () => {
     jumpScareSound.currentTime = 0; // Reset audio to the beginning
   }, 3000); // Adjust this value as needed for the duration of the effect
 });
+
+//More amenities window
+
+document.addEventListener("DOMContentLoaded", function () {
+  const moreAmenitiesButton = document.querySelector(".more-amenities-button");
+  const slidingDiv = document.querySelector(".sliding-div");
+  const backButton = document.querySelector(".back-button");
+
+  moreAmenitiesButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      slidingDiv.style.transform = "translateY(0)";
+  });
+
+  backButton.addEventListener("click", function () {
+      slidingDiv.style.transform = "translateY(100%)";
+  });
+});
