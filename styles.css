@@ -139,6 +139,17 @@ hr {
   line-height: 24px;
 }
 
+p {
+  display: none;
+}
+
+#seeMoreButton {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+
+
 
 .slider-container {
   width: 100vw;

@@ -20,6 +20,37 @@ container.addEventListener('scroll', () => {
   });
 });
 
+//'See more' function
+document.addEventListener("DOMContentLoaded", function() {
+  const contentDiv = document.getElementById("content");
+  const seeMoreButton = document.getElementById("seeMoreButton");
+  const paragraphs = contentDiv.getElementsByTagName("p");
+  const maxVisible = 1; // Number of paragraphs initially visible
+  let visibleCount = maxVisible;
+
+  function updateVisibility() {
+    for (let i = 0; i < paragraphs.length; i++) {
+      if (i < visibleCount) {
+        paragraphs[i].style.display = "block";
+      } else {
+        paragraphs[i].style.display = "none";
+      }
+    }
+  }
+
+  updateVisibility();
+
+  seeMoreButton.addEventListener("click", function() {
+    visibleCount = visibleCount === maxVisible ? paragraphs.length : maxVisible;
+    updateVisibility();
+
+    seeMoreButton.textContent = visibleCount === maxVisible ? "Show More" : "Show Less";
+  });
+});
+
+
+
+
 //Jump Scare Function
 const jumpScareButton = document.getElementById('jumpScareButton');
 const imageContainer = document.getElementById('imageContainer');
