@@ -49,27 +49,37 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
-
 //Jump Scare Function
-const jumpScareButton = document.getElementById('jumpScareButton');
-const imageContainer = document.getElementById('imageContainer');
-const jumpScareSound = document.getElementById('jumpScareSound');
 
-jumpScareButton.addEventListener('click', () => {
-  // Play the jump scare sound
-  jumpScareSound.play();
+// const btnEl = document.getElementById('jumpScareButton');
+// const audio = new Audio('Jump-Scare.m4a');
 
-  // Show the scary image
-  imageContainer.classList.add('show');
+// btnEl.addEventListener('click', () => {
+//   audio.play();
+// });
 
-  // Hide the scary image and pause the sound after a brief moment
-  setTimeout(() => {
-    imageContainer.classList.remove('show');
-    jumpScareSound.pause();
-    jumpScareSound.currentTime = 0; // Reset audio to the beginning
-  }, 3000); // Adjust this value as needed for the duration of the effect
+const jumpScareButton = document.getElementById("jumpScareButton");
+const imageContainer = document.getElementById("imageContainer");
+const scaryVideo = document.getElementById("scaryVideo");
+
+jumpScareButton.addEventListener("click", function() {
+  // Set the source of the video
+  scaryVideo.src = "jump-scare-vid.mp4";
+
+  // Play the video
+  scaryVideo.play();
+
+  // Display the video container
+  imageContainer.style.display = "block";
+
+  // When the video finishes playing, hide the container and reset the source
+  scaryVideo.addEventListener("ended", function() {
+    imageContainer.style.display = "none";
+    scaryVideo.src = "";
+  });
 });
+
+
 
 //More amenities window
 
