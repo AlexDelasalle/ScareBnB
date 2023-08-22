@@ -148,13 +148,10 @@ p {
   display: none;
 }
 
-#seeMoreButton {
+#seeMoreButton, #seeMoreReviews {
   text-decoration: underline;
   font-weight: 500;
 }
-
-
-
 
 .slider-container {
   width: 100vw;
@@ -257,6 +254,29 @@ p {
   align-items: center;
   gap: 1vw;
   font-weight: 600;
+  margin-bottom: 32px;
+}
+.swiper {
+  width: 100vw;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  gap: 3vw;
+}
+
+.swiper-slide {
+  border: 1px solid #DDDDDD;
+  border-radius: 12px;
+  height: 100%;
+  width: 85vw !important;
+  --dls-carousel-item-max-width: 80%;
+  --dls-carousel-item-flex: 0 0 80%;
+  --dls-carousel-item-border-width: 0px 8px 0px 8px;
+}
+
+.slider-content {
+  padding: 20px;
 }
 
 /*jump scare */
@@ -328,9 +348,9 @@ button:active {
   background-color: #FF385C;
 }
 
-@media (min-width: 800px) {
+/* @media (min-width: 800px) {
   /* Styles specific to desktop screens */
-  body {
+  /* body {
       /* Add more styles as needed */
-  }
-}
+  /* }
+} */

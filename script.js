@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+
 //Jump Scare Function
 
 // const btnEl = document.getElementById('jumpScareButton');
@@ -80,8 +81,6 @@ jumpScareButton.addEventListener("click", function() {
 });
 
 
-
-
 //More amenities window
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -97,4 +96,14 @@ document.addEventListener("DOMContentLoaded", function () {
   backButton.addEventListener("click", function () {
       slidingDiv.style.transform = "translateY(100%)";
   });
+});
+
+
+// Reviews Swiper
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  slidesPerView: 2,
+  loop: false,
+  allowTouchMove: true,
 });

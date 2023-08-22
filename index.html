@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
   <title>ScareBnB</title>
 </head>
 <body>
@@ -187,8 +188,23 @@
         <div class="reviews-number">5 reviews
         </div>
       </div>
-      <div class="reviews-row2">
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="slider-content" id="slider-content">
+              Boo-tiful Haven Manor is the intergalactic odyssey I didn't know I needed! Each dawn, the resident kazoo orchestra serenaded the sunrise, while the indoor biome morphed from tropical to tundra. After sunset, the ghostly tea parties were a mix of cryptic riddles and invisible hopscotch. Leaving felt like stepping off a UFO – was it a vacation or a time-traveling vaudeville performance? The jury's still out!
+            </div>
+            <a id="seeMoreReviews">Show More</a>
+            <div class="slide-reviewer">
 
+            </div>
+          </div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          ...
+        </div>
       </div>
       <div class="reviews-row3">
 
@@ -239,6 +255,7 @@
     });
 
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 
 </body>
