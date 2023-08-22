@@ -64,13 +64,13 @@ const scaryVideo = document.getElementById("scaryVideo");
 
 jumpScareButton.addEventListener("click", function() {
   // Set the source of the video
-  scaryVideo.src = "jump-scare-vid.mp4";
+  scaryVideo.src = "jump-scare-video.mp4";
 
   // Play the video
   scaryVideo.play();
 
   // Display the video container
-  imageContainer.style.display = "block";
+  imageContainer.style.display = "flex";
 
   // When the video finishes playing, hide the container and reset the source
   scaryVideo.addEventListener("ended", function() {
@@ -78,6 +78,7 @@ jumpScareButton.addEventListener("click", function() {
     scaryVideo.src = "";
   });
 });
+
 
 
 
