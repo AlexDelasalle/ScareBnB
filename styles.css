@@ -34,7 +34,7 @@ hr {
 .container {
   margin-left: 7vw;
   margin-right: 7vw;
-  padding-bottom: 20vh;
+  padding-bottom: 3vh;
 }
 
 .separator {
@@ -281,7 +281,7 @@ p {
 .review-card {
   border: 1px solid #DDDDDD;
   border-radius: 12px;
-  height: 35vh !important;
+  height: fit-content !important;
   padding: 20px;
 }
 
