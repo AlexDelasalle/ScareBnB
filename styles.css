@@ -16,12 +16,11 @@ hr {
 
 .photo-carousel-container {
   width: 100vw;
-  height: auto;
 }
 
 .photo-carousel-container img {
+  aspect-ratio: 4/3;
  width: 100%;
- aspect-ratio: 4/3;
  background-size: contain;
 }
 
@@ -257,28 +256,41 @@ p {
   font-weight: 600;
   margin-bottom: 32px;
 }
-.swiper {
-  width: 100vw;
-  height: 100%;
+
+.reviewer {
+ display: flex;
+ flex-direction: row;
+ margin-top: 20px;
 }
 
-.swiper-wrapper {
-  gap: 3vw;
+.reviewer-header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.swiper-slide {
+#reviewer-photo {
+  border-radius: 50%;
+  width: 70px !important;
+  height: 70px !important;
+  margin-right: 10px;
+}
+
+.review-card {
   border: 1px solid #DDDDDD;
   border-radius: 12px;
-  height: 100%;
-  width: 85vw !important;
-  --dls-carousel-item-max-width: 80%;
-  --dls-carousel-item-flex: 0 0 80%;
-  --dls-carousel-item-border-width: 0px 8px 0px 8px;
-}
-
-.slider-content {
+  height: 30vh !important;
   padding: 20px;
 }
+
+.review-content {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: .1vw;
+  line-height: 24px;
+}
+
+
 
 /*jump scare */
 #imageContainer {
