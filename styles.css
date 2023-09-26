@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100vw;
 }
 
 hr {
@@ -15,14 +16,15 @@ hr {
 
 
 .photo-carousel-container {
-  width: 100vw;
+  width: 100%;
 }
 
 .photo-carousel-container img {
-  aspect-ratio: 4/3;
- width: 100%;
+ aspect-ratio: 4/3;
+ width: 100vw;
  background-size: contain;
 }
+
 
 .photo-carousel-container button {
   display: none !important;
@@ -279,7 +281,7 @@ p {
 .review-card {
   border: 1px solid #DDDDDD;
   border-radius: 12px;
-  height: 30vh !important;
+  height: 35vh !important;
   padding: 20px;
 }
 
