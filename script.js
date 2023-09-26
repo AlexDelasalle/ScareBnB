@@ -6,7 +6,7 @@ const items = document.querySelectorAll('.item');
 
 // Add event listener to the container
 container.addEventListener('scroll', () => {
-  const itemWidth = items[0].offsetWidth; // 10px margin-right
+  const itemWidth = items[0].offsetWidth + 10; // 10px margin-right
 
   const scrollPosition = container.scrollLeft;
   const activeIndex = Math.floor(scrollPosition / itemWidth);
