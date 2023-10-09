@@ -1,5 +1,14 @@
 // JavaScript is used to make the slider interactive
 
+//LOAD THE MUSIC BABY
+document.addEventListener("DOMContentLoaded", function () {
+  // Access the audio element by its ID
+  var audio = document.getElementById("myAudio");
+
+  // Play the audio file on page load
+  audio.play();
+});
+
 // Select the container and items
 const container = document.querySelector('.photo-carousel-container');
 const items = document.querySelectorAll('.item');
