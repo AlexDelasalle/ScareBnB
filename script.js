@@ -1,13 +1,18 @@
 // JavaScript is used to make the slider interactive
+var audio = document.getElementById('music');
 
-//LOAD THE MUSIC BABY
-document.addEventListener("DOMContentLoaded", function () {
-  // Access the audio element by its ID
-  var audio = document.getElementById("myAudio");
+// Function to play the audio when the user taps the document
+function playOnTap() {
+    if (audio.paused) {
+        audio.play();
+    }
+}
 
-  // Play the audio file on page load
-  audio.play();
-});
+// Add a tap event listener to the document
+document.addEventListener('touchstart', playOnTap);
+
+// For compatibility, also add a click event listener (for non-touch devices)
+document.addEventListener('click', playOnTap);
 
 // Select the container and items
 const container = document.querySelector('.photo-carousel-container');
