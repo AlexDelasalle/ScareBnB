@@ -1,18 +1,23 @@
-// JavaScript is used to make the slider interactive
-var audio = document.getElementById('music');
+const audio = document.getElementById("music");
+const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
-// Function to play the audio when the user taps the document
-function playOnTap() {
-    if (audio.paused) {
+// Check if the MEI threshold has been crossed (greater than or equal to 0.2 in this example)
+if (window.chrome && window.chrome.loadTimes) {
+    const loadTimes = window.chrome.loadTimes();
+    const mei = loadTimes && loadTimes.metered_module_in_viewport / loadTimes.visible_area;
+
+    if (mei >= 0.2) {
+        // MEI threshold crossed, autoplay is allowed
         audio.play();
+    } else {
+        // MEI threshold not crossed, audio will not autoplay
+        // You can add a user interaction to play the audio manually in this case
+        console.log("MEI threshold not crossed, user interaction required for autoplay.");
     }
+} else {
+    // MEI not available, autoplay is allowed (fallback)
+    audio.play();
 }
-
-// Add a tap event listener to the document
-document.addEventListener('touchstart', playOnTap);
-
-// For compatibility, also add a click event listener (for non-touch devices)
-document.addEventListener('click', playOnTap);
 
 // Select the container and items
 const container = document.querySelector('.photo-carousel-container');
