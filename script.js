@@ -1,24 +1,3 @@
-const audio = document.getElementById("music");
-const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-
-// Check if the MEI threshold has been crossed (greater than or equal to 0.2 in this example)
-if (window.chrome && window.chrome.loadTimes) {
-    const loadTimes = window.chrome.loadTimes();
-    const mei = loadTimes && loadTimes.metered_module_in_viewport / loadTimes.visible_area;
-
-    if (mei >= 0.2) {
-        // MEI threshold crossed, autoplay is allowed
-        audio.play();
-    } else {
-        // MEI threshold not crossed, audio will not autoplay
-        // You can add a user interaction to play the audio manually in this case
-        console.log("MEI threshold not crossed, user interaction required for autoplay.");
-    }
-} else {
-    // MEI not available, autoplay is allowed (fallback)
-    audio.play();
-}
-
 // Select the container and items
 const container = document.querySelector('.photo-carousel-container');
 const items = document.querySelectorAll('.item');

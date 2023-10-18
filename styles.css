@@ -141,7 +141,7 @@ hr {
 
 .box-text-line-2 {
   font-size: 12px;
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: .1vw;
 }
 
@@ -234,7 +234,7 @@ p {
   font-size: 16px;
   line-height: 3vh;
   letter-spacing: .25vw;
-  font-weight: 100;
+  font-weight: 300;
   margin-top: 2vh;
   margin-bottom: 4vh;
 }
@@ -299,6 +299,12 @@ p {
   line-height: 24px;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+
+}
 
 
 /*jump scare */
@@ -376,6 +382,3 @@ button:active {
       /* Add more styles as needed */
   /* }
 } */
-#music {
-  display: none;
-}
